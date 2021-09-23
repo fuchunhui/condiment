@@ -1,0 +1,32 @@
+@import "variable.less";
+
+@baseFontSize: 75px;
+
+.convert2rem(@px) {
+  @value: unit(@px) / @baseFontSize * 1rem;
+}
+
+// .px2rem(margin, 100px, 200px, 300px, 400px);
+// .px2rem(padding, 10px, 20px);
+// .px2rem(background-size, 100%, 210px);
+.px2rem(@property, @rest...) {
+  .loop(@counter) when (@counter > 0) {
+    .loop((@counter - 1));
+    @value: extract(@rest, @counter);
+    @{property}+_: if(isnumber(@value) and (not (ispercentage(@value))), .convert2rem(@value)[@value], @value);
+  }
+  .loop(length(@rest));
+}
+
+.position-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
