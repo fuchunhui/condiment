@@ -13,15 +13,7 @@
     </div>
   </div>
   <div class="travel">
-    {{ `Normal Store.${dateProtocol}: ${dateCouple}, ${getListLength} --- ${getLength}` }}
-    <ul>
-      <li
-        v-for="(item, index) in dateList"
-        :key="index"
-      >
-        {{ item.toDateString() }}
-      </li>
-    </ul>
+    {{ `Normal Store.${dateProtocol}` }}
   </div>
 </template>
 
@@ -29,7 +21,7 @@
 import Home from '@/components/road/Home.vue';
 import About from '@/components/road/About.vue';
 import {ref, defineComponent, PropType, computed} from 'vue';
-import {useStore, mapState, mapGetters} from 'vuex';
+import {useStore, mapState} from 'vuex';
 
 interface Book {
   title: string;
@@ -95,7 +87,7 @@ export default defineComponent({
     return {
       dataCount: 100,
       book: {
-        title: 'two-month',
+        title: 'condiment',
         author: 'me',
         year: 2020
       } as Book
@@ -146,12 +138,6 @@ export default defineComponent({
         this.book.title = newValue.toUpperCase();
       }
     },
-    dateList(): Array<Date> {
-      return this.$store.getters.getDateList;
-    },
-    dateCouple(): number {
-      return this.$store.getters.getQuadruple(3);
-    },
     dateProtocol(): string {
       // return this.$store.state.date.protocol; // 怎么解决这种红线的问题
       return 'https';
@@ -164,12 +150,6 @@ export default defineComponent({
     }),
     ...mapState([
       'date'
-    ]),
-    ...mapGetters({
-      'getLength': 'getListLength'
-    }),
-    ...mapGetters([
-      'getListLength'
     ])
   },
   methods: {

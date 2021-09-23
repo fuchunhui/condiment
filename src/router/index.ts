@@ -14,18 +14,6 @@ const routes: Array<RouteRecordRaw> = [
     component: Travel
   },
   {
-    path: '/analysis',
-    name: 'Analysis',
-    component: () =>
-      import(/* webpackChunkName: "analysis" */ '@/views/Analysis.vue')
-  },
-  {
-    path: '/acquisition',
-    name: 'Acquisition',
-    component: () =>
-      import(/* webpackChunkName: "acquisition" */ '@/views/Acquisition.vue')
-  },
-  {
     path: '/magic',
     name: 'Magic',
     component: () =>

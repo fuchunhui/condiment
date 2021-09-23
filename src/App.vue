@@ -1,11 +1,5 @@
 <template>
   <div class="nav">
-    <router-link to="acquisition" v-if="ready">
-      acquisition
-    </router-link> |
-    <router-link to="analysis">
-      analysis
-    </router-link> |
     <router-link to="travel">
       travel
     </router-link> |
@@ -16,19 +10,13 @@
       Magic CSS
     </router-link>
   </div>
-  <router-view class="month-content"/>
+  <router-view class="condiment-content"/>
 </template>
 
 <script lang="ts">
 import {defineComponent, ref} from 'vue';
-import Database from './db/index';
 
 export default defineComponent({
-  created() {
-    Database.initDB().then(() => {
-      this.ready = true;
-    });
-  },
   setup() {
     const ready = ref(false);
     return {
@@ -62,7 +50,7 @@ export default defineComponent({
     }
   }
 }
-.month-content {
+.condiment-content {
   flex: 1;
   width: 100%;
   height: 100%;

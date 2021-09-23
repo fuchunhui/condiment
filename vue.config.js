@@ -1,4 +1,3 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 function resolve(dir) {
@@ -7,23 +6,9 @@ function resolve(dir) {
 
 module.exports = {
   devServer: {
-    port: 8090
+    port: 8150
   },
   configureWebpack: {
-    plugins: [
-      new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: 'node_modules/sql.js/dist/sql-wasm.wasm',
-            to: 'wasm'
-          },
-          {
-            from: 'src/lib/sql.db',
-            to: 'db'
-          }
-        ]
-      })
-    ],
     externals: {
       fs: 'fs'
     },
