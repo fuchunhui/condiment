@@ -14,8 +14,7 @@
     "baseUrl": ".",
     "types": [
       "webpack-env",
-      "node",
-      "sql.js"
+      "node"
     ],
     "paths": {
       "*": ["*", "src/*"],
