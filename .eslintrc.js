@@ -50,15 +50,17 @@ module.exports = {
     'vue/html-indent': ['error', 2],
     'vue/max-attributes-per-line': ['error', {
       'singleline': 10,
-      'multiline': {
-        'max': 1,
-        'allowFirstLine': false
-      }
+      'multiline': 5
     }],
     'vue/html-closing-bracket-spacing': ['error', {
       'startTag': 'never',
       'endTag': 'never',
       'selfClosingTag': 'never'
+    }],
+    'vue/multi-word-component-names': ['error', {
+      "ignores": [
+        'About', 'Counter', 'Home', 'Test', 'Super', 'Travel'
+      ]
     }],
 
     '@typescript-eslint/semi': ['error', 'always'],
