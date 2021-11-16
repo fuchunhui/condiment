@@ -6,6 +6,9 @@
     <router-link to="/">
       Super Demo
     </router-link> |
+    <router-link to="simple">
+      Simple
+    </router-link> |
     <router-link to="magic">
       Magic CSS
     </router-link>

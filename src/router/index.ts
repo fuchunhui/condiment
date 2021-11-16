@@ -1,12 +1,18 @@
 import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router';
 import Travel from '@/views/Travel.vue';
 import Super from '@/views/Super.vue';
+import Simple from '@/views/Simple.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Super',
     component: Super
+  },
+  {
+    path: '/simple',
+    name: 'Simple',
+    component: Simple
   },
   {
     path: '/travel',

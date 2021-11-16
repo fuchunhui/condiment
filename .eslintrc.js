@@ -57,7 +57,7 @@ module.exports = {
       'endTag': 'never',
       'selfClosingTag': 'never'
     }],
-    'vue/multi-word-component-names': ['error', {
+    'vue/multi-word-component-names': ['off', {
       "ignores": [
         'About', 'Counter', 'Home', 'Test', 'Super', 'Travel'
       ]
