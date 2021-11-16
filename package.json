@@ -17,7 +17,7 @@
     "echarts": "^5.1.1",
     "path-browserify": "^1.0.1",
     "stream-browserify": "^3.0.0",
-    "vue": "^3.2.14",
+    "vue": "^3.2.22",
     "vue-class-component": "^8.0.0-rc.1",
     "vue-router": "^4.0.11",
     "vuex": "^4.0.2"
