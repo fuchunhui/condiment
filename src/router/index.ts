@@ -24,6 +24,12 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Magic',
     component: () =>
       import(/* webpackChunkName: "magic" */ '@/views/episodes/MagicCSS.vue')
+  },
+  {
+    path: '/canvas',
+    name: 'Canvas',
+    component: () =>
+      import(/* webpackChunkName: "canvas" */ '@/views/episodes/Canvas.vue')
   }
 ];
 

@@ -11,6 +11,9 @@
     </router-link> |
     <router-link to="magic">
       Magic CSS
+    </router-link> |
+    <router-link to="canvas">
+      Amazing Canvas
     </router-link>
   </div>
   <router-view class="condiment-content"/>
