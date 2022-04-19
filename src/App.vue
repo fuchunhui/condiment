@@ -14,6 +14,9 @@
     </router-link> |
     <router-link to="canvas">
       Amazing Canvas
+    </router-link> |
+    <router-link to="amazing">
+      Amazing CSS
     </router-link>
   </div>
   <router-view class="condiment-content"/>

@@ -6,30 +6,36 @@ import Simple from '@/views/Simple.vue';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Super',
+    name: 'super',
     component: Super
   },
   {
     path: '/simple',
-    name: 'Simple',
+    name: 'simple',
     component: Simple
   },
   {
     path: '/travel',
-    name: 'Travel',
+    name: 'travel',
     component: Travel
   },
   {
     path: '/magic',
-    name: 'Magic',
+    name: 'magic',
     component: () =>
       import(/* webpackChunkName: "magic" */ '@/views/episodes/MagicCSS.vue')
   },
   {
     path: '/canvas',
-    name: 'Canvas',
+    name: 'canvas',
     component: () =>
       import(/* webpackChunkName: "canvas" */ '@/views/episodes/Canvas.vue')
+  },
+  {
+    path: '/amazing',
+    name: 'amazing',
+    component: () =>
+      import(/* webpackChunkName: "canvas" */ 'src/views/episodes/AmazingCSS.vue')
   }
 ];
 
