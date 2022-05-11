@@ -6,9 +6,11 @@
 **/
 
 const createNew = func => {
-  const target = {};
-  target.__proto__ = func.prototype;
-  const res = func.call(target);
+  const target = {}; // 1.在内存中创建一个新对象
+  target.__proto__ = func.prototype; // 2.新对象内部的[[Prototype]]特性被赋值为构造函数的 prototype 属性
+  const res = func.call(target); // 3.构造函数内部的 this 被赋值为这个新对象，即 this 指向新对象
+  // 4.执行构造函数内部的代码，即给新对象添加属性
+  // 5.如果构造函数返回非空对象，则返回该对象，即 res；否则返回新创建的对象，即 target
   if (typeof res === 'object' || typeof res === 'function') {
     return res;
   }
