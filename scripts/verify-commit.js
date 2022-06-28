@@ -1,5 +1,5 @@
 /*eslint-disable*/
-const chalk = require('chalk');
+const chalk = import('chalk');
 const path = require('path');
 const msgPath = path.resolve(__dirname, '../.git/COMMIT_EDITMSG');
 const msg = require('fs').readFileSync(msgPath, 'utf-8').trim();

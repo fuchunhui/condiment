@@ -22,7 +22,7 @@ const makeCanvas = () => {
   baselines.forEach((baseline, index) => {
     ctx.save();
     ctx.textBaseline = baseline as CanvasRenderingContext2D['textBaseline'];
-    let x = index * 140;
+    const x = index * 140;
     ctx.fillText('Abcdefghijklmnop', x, 100);
     ctx.restore();
     ctx.fillText(baseline, x + 30, 50);

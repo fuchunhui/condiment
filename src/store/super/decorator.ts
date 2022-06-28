@@ -33,16 +33,16 @@ export default function (): void {
     return Reflect.getMetadata(formatMetadataKey, target, propertyKey);
   };
 
-  @sealed
+  // @sealed
   class Greeter {
-    @format('hello, %s')
+    // @format('hello, %s')
     greeting: string;
 
     constructor(message: string) {
       this.greeting = message;
     }
 
-    @enumerable(true)
+    // @enumerable(true)
     greet() {
       const formatString = getFormat(this, 'greeting');
       console.log('formatString: ', formatString);
@@ -62,7 +62,7 @@ export default function (): void {
     };
   }
 
-  @classDecorator
+  // @classDecorator
   class Greeter2 {
     property = 'property';
     hello: string = 'hello';
@@ -94,12 +94,12 @@ export default function (): void {
       this._y = y;
     }
 
-    @configurable(false)
+    // @configurable(false)
     get x() {
       return this._x;
     }
 
-    @configurable(false)
+    // @configurable(false)
     get y() {
       return this._y;
     }
@@ -117,7 +117,7 @@ export default function (): void {
       this._p1 = p1;
     }
 
-    @Reflect.metadata('design:type', Point)
+    // @Reflect.metadata('design:type', Point)
     set p0(value: Point) {
       this._p0 = value;
     }
@@ -126,7 +126,7 @@ export default function (): void {
       return this._p0;
     }
 
-    @Reflect.metadata('design:type', Point)
+    // @Reflect.metadata('design:type', Point)
     set p1(value: Point) {
       this._p1 = value;
     }

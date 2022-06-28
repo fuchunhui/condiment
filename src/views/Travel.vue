@@ -125,7 +125,8 @@ export default defineComponent({
   },
   computed: {
     storeCount(): number {
-      return this.$store.getters.getCount + this.$store.state.count;
+      // return this.$store.getters.getCount + this.$store.state.count;
+      return 0;
     },
     greeting(): string {
       return this.book.title + '!';
