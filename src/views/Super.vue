@@ -1,6 +1,17 @@
 <template>
   <div class="super-demo">
     TypeScript {{ time }}
+    <ul>
+      <li class="background-1">
+        123
+      </li>
+      <li class="background-2">
+        456
+      </li>
+      <li class="background-3">
+        789
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -18,25 +29,24 @@
 // import modules from 'store/super/modules';
 // import advance from 'store/super/advance';
 // import cus from 'store/super/cus';
-import checkType from 'store/super/checkType';
+// import checkType from 'store/super/checkType';
 
 export default {
   created() {
-    // basic();
-    // interfaces();
-    // functions();
-    // literal();
-    // intersections();
-    // classes();
-    // enums();
-    // generics();
-    // decorator();
-    // utility();
-    // modules();
-    // advance();
-    // cus();
-    checkType();
-
+  // basic();
+  // interfaces();
+  // functions();
+  // literal();
+  // intersections();
+  // classes();
+  // enums();
+  // generics();
+  // decorator();
+  // utility();
+  // modules();
+  // advance();
+  // cus();
+  // checkType();
   },
   setup() {
     const date = new Date();
@@ -52,6 +62,25 @@ export default {
   padding: 30px;
   @media (prefers-color-scheme: dark) {
     background: #E5EEEF;
+  }
+
+  .palette(@color: #4C84FF) {
+    .loop(@counter) when (@counter > 0) {
+      .loop((@counter - 1));    // next iteration
+      data-name+: if(@counter > 2, hsv(90, 100%, 50%), #3333AA);
+    }
+    
+    .loop(3);
+    @result: $data-name;
+  }
+  ul {
+    @background-color: .palette(#4C84FF)[@result];
+
+    each(@background-color, {
+      .background-@{index} {
+        color: @value;
+      }
+    })
   }
 }
 </style>
