@@ -36,6 +36,12 @@ const routes: Array<RouteRecordRaw> = [
     name: 'amazing',
     component: () =>
       import(/* webpackChunkName: "canvas" */ 'src/views/episodes/AmazingCSS.vue')
+  },
+  {
+    path: '/finger',
+    name: 'finger',
+    component: () =>
+      import(/* webpackChunkName: "canvas" */ 'src/views/Finger.vue')
   }
 ];
 

@@ -6,6 +6,9 @@
     <router-link to="/">
       Super Demo
     </router-link> |
+    <router-link to="finger">
+      Finger
+    </router-link> |
     <router-link to="simple">
       Simple
     </router-link> |
